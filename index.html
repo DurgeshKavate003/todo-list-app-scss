@@ -19,9 +19,56 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <main></main>
+    <main>
+        <div class="todos">
+
+            <!-- Buttons -->
+
+            <nav id="todos-nav">
+                
+                <button data-filter="all">
+                    <i class="fa-solid fa-box-archive"></i> All
+                </button>
+
+                <button data-filter="today">
+                    <i class="fa-solid fa-calendar-day"></i> Today
+                </button>
+
+                <button data-filter="overdue">
+                    <i class="fa-solid fa-circle-exclamation"></i> Overdue
+                </button>
+
+                <button data-filter="scheduled">
+                    <i class="fa-solid fa-clock"></i> Scheduled
+                </button>
+
+                <button data-filter="pending">
+                    <i class="fa-regular fa-circle"></i> Pending
+                </button>
+
+                <button data-filter="completed">
+                    <i class="fa-regular fa-circle-check"></i> Completed
+                </button>
+
+            </nav>
+
+            <!-- Form -->
+            <form id="add-todo-form">
+                <input type="text" name="todo-text" id="todo-text" placeholder="Todo..." required>
+                <input type="date" name="todo-date" id="todo-date" required>
+                <button id="add-todo-btn" class="active" type="submit">Add</button>
+            </form>
+
+
+            <ul id="todos-list">
+
+            </ul>
+
+        </div>
+    </main>
     
     <script src="app.js"></script>
 </body>
